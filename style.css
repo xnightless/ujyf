@@ -1,0 +1,52 @@
+body {
+  background-image: url(https://mail.google.com/mail/u/0?ui=2&ik=d9eda55ddf&attid=0.1&permmsgid=msg-a:r-559986927997579928&th=18ccc015689ded8c&view=att&disp=safe&realattid=f_lqwucoy51);
+  background-size: cover;
+  background-position: center;
+  background-color: black;
+  overflow: none;
+}
+ul.navbar {
+  list-style-type: none;
+  margin: 0;
+  z-index: 2;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+}
+/* Add these styles for snowflakes particles */
+.particles {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  pointer-events: none;
+}
+.particle {
+  flex: 1;
+  position: relative;
+  top: -10%;
+  animation: snowflakes-fall 15s linear, snowflakes-shake 5s ease-in-out;
+  animation-delay: var(--d);
+  animation-iteration-count: infinite;
+  width: 10%;
+  height: 10%;
+  color: white;
+}
+@keyframes snowflakes-fall {
+  100% {
+    top: 100%;
+  }
+}
+@keyframes snowflakes-shake {
+  50% {
+    transform: translateX(100px) rotate(5deg);
+  }
+}
+
